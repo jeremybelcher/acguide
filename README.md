@@ -2,4 +2,4 @@
 
 This is an attempt at a social travel site. 
 
-by Jeremy [Jeremy Belcher](http://www.twitter.com/jeremybelcher)
+by Jeremy Belcher](http://www.twitter.com/jeremybelcher)
