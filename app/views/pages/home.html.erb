@@ -1,9 +1,12 @@
-<div class="container">
+	<% if user_signed_in? %>
+	<h1>Hello, you are signed in winner...</h1>
+
+		<% else %>
 	<h1>Anywhere.travel</h1>
 		<p>
 			Local, help travelers. Travelers, get the best advice from locals. From <%= link_to "The Anywhere Company", "http://www.anywherecompany.com"%>
 		</p>
 		<p>
-			<%= link_to "Sign Up Now", "#" %>
+			<%= link_to "Sign Up Now", new_user_registration_path %>
 		</p>
-</div>
+<% end %>

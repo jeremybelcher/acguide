@@ -1,4 +1,6 @@
 Acguide::Application.routes.draw do
+  devise_for :users
+
   get 'newyork' => 'pages#newyork'
 
   root :to => 'pages#home'
