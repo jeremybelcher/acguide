@@ -1,12 +1,62 @@
 	<% if user_signed_in? %>
-	<h1>Hi <%= current_user.name %> from <%= current_user.city %></h1>
-
+	<h1><%= image_tag current_user.image, class: "img-polaroid" %> <%= current_user.name %> from <%= current_user.city %></h1>
 		<% else %>
 	<h1>Anywhere.travel</h1>
-		<p>
-			Local, help travelers. Travelers, get the best advice from locals. From <%= link_to "The Anywhere Company", "http://www.anywherecompany.com"%>
+		<p class="lead">
+			Local, help travelers. Travelers, get the best advice from locals.
 		</p>
-		<p>
-			<%= link_to "Sign Up Now", new_user_registration_path %>
+		<p class="lead">
+			<%= link_to image_tag("http://static.bambuser.com/r/img/webservices/facebook-login-button.png", :border => 0), user_omniauth_authorize_path(:facebook) %>
 		</p>
+	
+
 <% end %>
+<hr />
+<br />
+<h4>Explore Cities</h4>
+<div class="row">
+      <div class="span4">
+            <a href="newyork.php">
+            <img src="http://socialvampyre.com/wp-content/uploads/New-York-Night-Skyline-stock6668.jpg" class="img-polaroid">
+            <h3><%= link_to "New York", newyork_path %></h3>
+      </div>
+      <div class="span4">
+            <img src="http://i.telegraph.co.uk/multimedia/archive/02423/london_2423609b.jpg" class="img-polaroid">
+            <h3>London</h3>
+      </div>
+      <div class="span4">
+            <img src="http://www.tripify.com/wp-content/uploads/singapore-at-night-hot-days-and-hotter-nights-finding-awesome-nightlife-in-the-worlds-warmest-cities.jpg?252dd2" class="img-polaroid">
+            <h3>Singapore</h3>
+      </div>
+    </div>
+    
+    <div class="row">
+        <div class="span4">
+          <img src="http://farm3.staticflickr.com/2764/4110420166_4e7fc3c91d_z.jpg?zz=1" class="img-polaroid">
+          <h3>Tokyo</h3>
+        </div>
+        <div class="span4">
+          <img src="http://polpix.sueddeutsche.com/bild/1.1406949.1355282590/560x315/berlin-staedtetipps-szkorrespondenten.jpg" class="img-polaroid">
+          <h3>Berlin</h3>
+        </div>
+        <div class="span4">
+          <img src="http://a1.cdn-hotels.com/static/common/24.0/images/photos/city/26633_Sydney_Australia.jpg" class="img-polaroid">
+          <h3>Sydney</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="span4">
+            <img src="http://www.nyhabitat.com/blog/wp-content/uploads/2013/03/Paris-romantic-sunset-vacations-seine.jpg" class="img-polaroid">
+            <h3>Paris</h3>
+        </div>
+        <div class="span4">
+            <img src="http://www.toimg.net/managed/images/10119086/w482/h298/image.jpg" class="img-polaroid">
+            <h3>Bangkok</h3>
+        </div>
+        <div class="span4">
+            <img src="http://media-cdn.tripadvisor.com/media/photo-s/03/9b/2d/bf/cape-town-central.jpg" class="img-polaroid">
+            <h3>Cape Town</h3>
+        </div>
+    </div>
+

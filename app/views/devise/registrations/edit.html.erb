@@ -8,7 +8,9 @@
   <%= f.input :email %>
   <%= f.input :password, label: "New Password", autocomplete: "off" %>
   <%= f.input :password_confirmation, label: "New Password Confirmation", autocomplete: "off" %>
+  <% if f.object.encrypted_password.present? %>
   <%= f.input :current_password %>
+  <% end %>
 
   <div class="form-actions">
     <%= f.submit "Update", class: "btn btn-primary" %>
